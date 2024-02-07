@@ -3,7 +3,7 @@ Bytecoin integration/staging tree
 
 https://bytecoin.biz
 
-Copyright (c) 2009-2012 Bitcoin Developers
+Copyright (c) 2009-2012 Bitcoin Developers  
 Copyright (c) 2013-2024 Bytecoin Developers
 
 What is Bytecoin?

@@ -1,24 +1,37 @@
-#ifndef TRANSACTIONDESC_H
-#define TRANSACTIONDESC_H
+// Copyright (c) 2011-2022 The Bitcoin Core developers
+// Distributed under the MIT software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <QString>
+#ifndef BITCOIN_QT_TRANSACTIONDESC_H
+#define BITCOIN_QT_TRANSACTIONDESC_H
+
+#include <qt/bitcoinunits.h>
+
 #include <QObject>
-#include <string>
+#include <QString>
 
-class CWallet;
-class CWalletTx;
+class TransactionRecord;
+
+namespace interfaces {
+class Node;
+class Wallet;
+struct WalletTx;
+struct WalletTxStatus;
+}
 
 /** Provide a human-readable extended HTML description of a transaction.
  */
 class TransactionDesc: public QObject
 {
     Q_OBJECT
+
 public:
-    static QString toHTML(CWallet *wallet, CWalletTx &wtx);
+    static QString toHTML(interfaces::Node& node, interfaces::Wallet& wallet, TransactionRecord* rec, BitcoinUnit unit);
+
 private:
     TransactionDesc() {}
 
-    static QString FormatTxStatus(const CWalletTx& wtx);
+    static QString FormatTxStatus(const interfaces::WalletTxStatus& status, bool inMempool);
 };
 
-#endif // TRANSACTIONDESC_H
+#endif // BITCOIN_QT_TRANSACTIONDESC_H

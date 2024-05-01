@@ -13,7 +13,19 @@ src/bitcoin-chainstate
 src/bitcoin-wallet
 src/test/fuzz/fuzz
 src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+
+src/qt/test/test_bytecoin-qt
+src/bytecoin
+src/bytecoind
+src/bytecoin-cli
+src/bytecoin-gui
+src/bytecoin-node
+src/bytecoin-tx
+src/bytecoin-util
+src/bytecoin-chainstate
+src/bytecoin-wallet
+src/test/test_bytecoin
+src/qt/test/test_bytecoin-qt
 
 # autoreconf
 Makefile.in
@@ -95,12 +107,17 @@ Makefile
 src/qt/bitcoin-qt
 Bitcoin-Qt.app
 
+src/qt/bytecoin-qt
+Bytecoin-Qt.app
+
 # Qt Creator
 Makefile.am.user
 
 # Unit-tests
 Makefile.test
 bitcoin-qt_test
+
+bytecoin-qt_test
 
 # Resources cpp
 qrc_*.cpp

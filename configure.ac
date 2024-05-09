@@ -1,9 +1,9 @@
 AC_PREREQ([2.69])
 define(_CLIENT_VERSION_MAJOR, 27)
-define(_CLIENT_VERSION_MINOR, 99)
-define(_CLIENT_VERSION_BUILD, 0)
+define(_CLIENT_VERSION_MINOR, 0)
+define(_CLIENT_VERSION_BUILD, 1)
 define(_CLIENT_VERSION_RC, 0)
-define(_CLIENT_VERSION_IS_RELEASE, false)
+define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2024)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
 define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Bitcoin Core]])
@@ -29,17 +29,17 @@ if test -n "$PKG_CONFIG_LIBDIR"; then
   PKG_CONFIG="env PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR $PKG_CONFIG"
 fi
 
-BITCOIN_DAEMON_NAME=bytecoind
-BITCOIN_GUI_NAME=bytecoin-qt
-BITCOIN_TEST_NAME=test_bytecoin
-BITCOIN_CLI_NAME=bytecoin-cli
-BITCOIN_TX_NAME=bytecoin-tx
-BITCOIN_UTIL_NAME=bytecoin-util
-BITCOIN_CHAINSTATE_NAME=bytecoin-chainstate
-BITCOIN_WALLET_TOOL_NAME=bytecoin-wallet
+BITCOIN_DAEMON_NAME=bitcoind
+BITCOIN_GUI_NAME=bitcoin-qt
+BITCOIN_TEST_NAME=test_bitcoin
+BITCOIN_CLI_NAME=bitcoin-cli
+BITCOIN_TX_NAME=bitcoin-tx
+BITCOIN_UTIL_NAME=bitcoin-util
+BITCOIN_CHAINSTATE_NAME=bitcoin-chainstate
+BITCOIN_WALLET_TOOL_NAME=bitcoin-wallet
 dnl Multi Process
-BITCOIN_MP_NODE_NAME=bytecoin-node
-BITCOIN_MP_GUI_NAME=bytecoin-gui
+BITCOIN_MP_NODE_NAME=bitcoin-node
+BITCOIN_MP_GUI_NAME=bitcoin-gui
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 dnl This is also the default as-of libtool 2.4.7
